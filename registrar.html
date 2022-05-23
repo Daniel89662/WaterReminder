@@ -71,7 +71,7 @@
                            <br>
                            <br>
                            <h4>Edad</h4>
-                        <select>
+                        <select name="edad">
                             <option disabled selected="">Seleccione su rango de edad</option>
                             <option>16</option>
                             <option>17</option>
@@ -83,7 +83,7 @@
                            <br>
                            <br>
                            <h4>Peso</h4>
-                           <select>
+                           <select name="peso">
                             <option disabled selected="">Seleccione su peso en kg</option>
                             <option>1</option>
                             <option>2</option>
@@ -339,7 +339,7 @@
                            <br>
                            <br>
                            <h4>Altura</h4>
-                           <select>
+                           <select name="altura">
                            <option disabled selected="">Seleccione su Altura en cm</option>
                            <option>1</option>
                            <option>2</option>
@@ -595,19 +595,19 @@
                             <br>
                            <br>
                            <h4>Sexo</h4>
-                           <select>
+                           <select name="sexo">
                            <option disabled selected="">Seleccione su Sexo</option>
-                            <option>Hombre</option>
-                            <option>Mujer</option>
+                            <option value="1">Hombre</option>
+                            <option value="2">Mujer</option>
                             </select>
                            <br>
                            <br>
                            <h4>Contraseña</h4>
-                           <input class="pass" name="pass" id="pass" type="pass">
+                           <input class="pass" name="password" id="pass" type="pass">
                            <br><br>
                             
-                            <a href="https://google.com">
-                             <button class="btn btn-primary btn-rounded" id="boton" type="submit" onclick="" value="Iniciar sesion">Iniciar sesion</button></a>
+                            <a href="login.html">
+                             <input type="button" class="btn btn-primary btn-rounded" id="boton" type="submit" onclick="" value="Registrarse"></a>
 
                                
                         </form>

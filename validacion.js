@@ -1,32 +1,90 @@
- 
+ function validar(formulario){
+    /*
+    Queremos validar que se escriban mas de 5 caracteres en el campo
+    de nombre
+    */ 
 
+    if(formulario.usuario.value.length < 5){
+        alert("Por favor escribe mas de 5 caracteres en el campo usuario");
+        formulario.usuario.focus();
+    return false;
+    }
 
-var clave = document.getElementById('pass');
-var usuario = document.getElementById('usuario');
+    /*
+    Validar que acepte unicamente letras */
 
+    var checkOk = "QWERTYUIOPASDFGHJKLÑZXCVBNM" 
+    + "qwertyuioasdfghjklzxcvbnm";
 
+    var checkStr = formulario.usuario.value;
 
-btn.addEventListener('click', function(evt)
-{
+    var allValid = true;
 
-
-      if(clave.value === ''){
+    for(var i = 0; i < checkStr.length; i++){
+        var ch = checkStr.charAt(i);
+        for( var j = 0; j < checkOk.length; j++)
+        if(ch == checkOk.charAt(j))
+            break;
         
-          console.log('el campo contraseña es obligatorio')
-          evt.preventDefault();
-          return false;
-      
-      }else if(usuario.value === ''){
-      
-      console.log('el campo de usuario es obligatorio')
-          evt.preventDefault();
-          return false;
-      
-      }else if(usuario.value.length > 20){
-      
-        console.log('El nombre del usuario es demasiado largo')
-          evt.preventDefault();
-          return false;
-      
-      }
-     } );
+        if(j == checkOk.length){
+            allValid = false;
+            break;
+        }
+    }
+
+    if(!allValid){
+        alert("Escribe solo letras en el campo usuario");
+        formulario.usuario.focus();
+        return false;
+    }
+
+    /*
+    validar solo numeros
+    */
+
+    var checkOk = "1234567890";
+
+    var checkStr = formulario.edad.value;
+
+    var allValid = true;
+
+    for(var i = 0; i < checkStr.length; i++){
+        var ch = checkStr.charAt(i);
+        for( var j = 0; j < checkOk.length; j++)
+        if(ch == checkOk.charAt(j))
+            break;
+        
+        if(j == checkOk.length){
+            allValid = false;
+            break;
+        }
+    }
+
+    if(!allValid){
+        alert("Escribe solo numeros en el campo Edad");
+        formulario.edad.focus();
+        return false;
+    }
+
+    /*
+    validar correo electronico
+    Expresiones regulares
+    a poder diferenciar una cadena de caracteres
+    y definir que caracteres son validos de acuerdo
+    a una condicion
+    */
+
+    var txt = formulario.email.value;
+
+    //expresion regular
+    //algo@algo.com
+    //algo@algo.algo.com
+    var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
+
+    alert("Email" + (b.test(txt)?"":" no ") + " valido");
+    return b.test(txt);
+
+}
+
+
+

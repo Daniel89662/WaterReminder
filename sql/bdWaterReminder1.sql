@@ -149,6 +149,18 @@ CREATE TABLE IF NOT EXISTS `Waterreminder`.`Alarmas` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `Waterreminder`.`Taza` (
+  `idTaza` INT NOT NULL AUTO_INCREMENT,
+  `cantidad` INT(10) NULL,
+  `Persona_idPersona` INT NOT NULL,
+  PRIMARY KEY (`idTaza`, `Persona_idPersona`),
+  INDEX `fk_Taza_Persona1_idx` (`Persona_idPersona` ASC) VISIBLE,
+  CONSTRAINT `fk_Taza_Persona1`
+    FOREIGN KEY (`Persona_idPersona`)
+    REFERENCES `Waterreminder`.`Persona` (`idPersona`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

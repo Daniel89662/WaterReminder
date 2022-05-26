@@ -55,17 +55,55 @@
 
 
     <header id="home" class="header">
-        <div class="overlay">
-            
+        <div class="overlay"></div>
+
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">  
+            <div class="container">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
                         <div class="carousel-caption d-none d-md-block">
-                            <h2>Alarma:00:00 </h2><input type="button" class="btn btn-primary" id="desactivar alarma" value="desactivar alarma"> <input type="reset" class="btn btn-primary" value="Eliminar"><br><br>
-                            <h2>Alarma:00:00 </h2> <input type="button" class="btn btn-primary" id="desactivar alarma" value="desactivar alarma"> <input type="reset" class="btn btn-primary" value="Eliminar"><br><br>
-                            <h2>Alarma:00:00 </h2> <input type="button" class="btn btn-primary" id="desactivar alarma" value="desactivar alarma"> <input type="reset" class="btn btn-primary" value="Eliminar"><br><br>
-                            <h2>Alarma:00:00 </h2><input type="submit" class="btn btn-primary" id="desactivar alarma" value="desactivar alarma"> <input type="reset" class="btn btn-primary" value="Eliminar"><br><br>
+                        <br>
+            
+                        
+                        <div align="center">
+                            <div id="sono"></div>
+                            
+                            <h2>Alarma:</h2>
+                            <br>
+                            <input type="number" id="hora"readonly>:<input type="number" id="min"readonly ></h2><br><input type="reset" class="btn btn-primary" value="Eliminar"><br><br>
+                            
+                            
+                            <h2>Alarma:</h2>
+                            <br>
+                            <input type="number" id="hora" readonly>:<input type="number" id="min" readonly></h2> <br><input type="reset" class="btn btn-primary" value="Eliminar"><br><br>
+                            
+                            <form action="">
+                            <h2>Alarma:</h2>
+                            <br>
+                            </form>
+                            <form action="">
+                            <input type="number" id="hora" readonly>:<input type="number" id="min" readonly></h2><br><input type="reset" class="btn btn-primary" value="Eliminar"><br><br>
+                            </form>
+                            <form action="">
+                            <h2>Alarma:</h2>
+                            <br>
+                            <input type="number" id="hora" readonly>:<input type="number" id="min" readonly></h2><br><input type="reset" class="btn btn-primary" value="Eliminar"><br><br>
+                            </form>
                             <a href="Agregaralarmas.html"><input type="submit" class="btn btn-primary" id="desactivar alarma" value="Agregar una alarma"></a><br><br>
-                         
+                            <div id="reloj"></div>
+           
+                        </div>  
+                       
+                        </div>
+                       
                     </div>
-        </div>
+                </header>
+                <header id="home" class="header">
+                    <div class="overlay">
+                     
+                    </div>
+       
+    
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -79,6 +117,7 @@
 
     <!-- Ollie js -->
     <script src="assets/js/Ollie.js"></script>
-
+    <script src="alarma.js"></script>
+</header>
 </body>
 </html>
